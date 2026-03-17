@@ -388,7 +388,7 @@ window.__LEDGER_DATA__ = {
       date: "2026-03-17",
       time: "10:19",
       category: "采购",
-      account: "信用卡",
+      account: "银行卡",
       note: "采购 TUF B850M-E 主板"
     }
   ]
