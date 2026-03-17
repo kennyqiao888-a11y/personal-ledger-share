@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>小马记账</title>
+  <script src="ledger-data.js"></script>
+  <style>
+    :root{
+      --bg:#f4f7fb; --card:#ffffff; --text:#152033; --muted:#667085; --line:#e7edf5;
+      --primary:#1d4ed8; --primary2:#4f46e5; --income:#16a34a; --expense:#dc2626; --warning:#f59e0b;
+      --shadow:0 10px 30px rgba(15,23,42,.08);
+      --radius:20px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif;color:var(--text);background:linear-gradient(180deg,#f8fbff 0%,#f4f7fb 100%)}
+    .wrap{max-width:1360px;margin:0 auto;padding:24px}
+    .topbar{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+    .title h1{margin:0;font-size:32px;letter-spacing:.2px}
+    .title p{margin:8px 0 0;color:var(--muted);line-height:1.5}
+    .btns{display:flex;gap:10px;flex-wrap:wrap}
+    button{border:0;border-radius:14px;padding:11px 16px;cursor:pointer;font-size:14px;font-weight:700;background:linear-gradient(135deg,var(--primary),var(--primary2));color:#fff;box-shadow:var(--shadow)}
+    button.secondary{background:#fff;color:var(--text);border:1px solid var(--line);box-shadow:none}
+
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;margin-bottom:18px}
+    .hero-main,.hero-side,.card,.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero-main{padding:22px;background:linear-gradient(135deg,#1e293b,#334155 55%,#4338ca);color:#fff}
+    .hero-main .eyebrow{font-size:13px;opacity:.85}
+    .hero-main .big{font-size:40px;font-weight:900;margin-top:8px}
+    .hero-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+    .hero-mini{padding:14px;border-radius:16px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16)}
+    .hero-mini .k{font-size:12px;opacity:.8}.hero-mini .v{font-size:20px;font-weight:800;margin-top:6px}
+    .hero-side{padding:20px}
+    .section-title{margin:0 0 12px;font-size:18px}
+    .sub{font-size:12px;color:var(--muted);line-height:1.5}
+    .chip-row,.filter-row{display:flex;gap:10px;flex-wrap:wrap}
+    .chip{padding:9px 12px;border-radius:999px;border:1px solid var(--line);background:#f8fafc;font-size:13px;font-weight:700;cursor:pointer;user-select:none}
+    .chip.active{background:#e8efff;border-color:#c7d2fe;color:#1d4ed8}
+
+    .stats{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-bottom:18px}
+    .stat{padding:16px}
+    .label{font-size:12px;color:var(--muted)}
+    .value{margin-top:8px;font-size:28px;font-weight:900}
+    .income{color:var(--income)} .expense{color:var(--expense)} .muted-value{color:#111827}
+
+    .layout{display:grid;grid-template-columns:360px 1fr;gap:18px}
+    .card{padding:18px}
+    .stack{display:grid;gap:18px}
+    .line-list{display:grid;gap:10px}
+    .line-item{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:#fbfcfe}
+    .line-item .left{min-width:0}
+    .line-item .name{font-weight:700}
+    .line-item .meta{font-size:12px;color:var(--muted);margin-top:4px}
+    .bar-wrap{margin-top:7px;height:8px;background:#eef2f7;border-radius:999px;overflow:hidden}.bar{height:100%;background:linear-gradient(90deg,var(--primary),var(--primary2))}
+
+    .filters{display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+    .tiny{font-size:12px;color:var(--muted)}
+    .sales-list{display:grid;gap:10px}
+    .sale{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:#fbfcff}
+    .sale-top{display:flex;justify-content:space-between;gap:12px;align-items:center}
+    .sale-note{margin-top:7px;font-weight:700;line-height:1.45}
+    .sale-meta{margin-top:6px;font-size:12px;color:var(--muted)}
+
+    .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:16px}
+    table{width:100%;border-collapse:collapse;font-size:14px;background:#fff}
+    th,td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+    th{color:var(--muted);font-weight:800;background:#f8fafc;position:sticky;top:0}
+    tr:hover td{background:#fafcff}
+    .tag{display:inline-block;padding:4px 9px;border-radius:999px;font-size:12px;font-weight:800}
+    .tag.income{background:#e8f7ed;color:var(--income)} .tag.expense{background:#fdecec;color:var(--expense)}
+    .amount{font-weight:900;white-space:nowrap}
+    .note{line-height:1.45;min-width:220px}
+
+    .footer-note{margin-top:12px;font-size:12px;color:var(--muted)}
+    @media (max-width:1120px){.hero,.layout{grid-template-columns:1fr}.stats{grid-template-columns:repeat(3,1fr)}}
+    @media (max-width:760px){.wrap{padding:16px}.stats{grid-template-columns:repeat(2,1fr)}.hero-grid{grid-template-columns:1fr}.title h1{font-size:28px}.value{font-size:24px}.hero-main .big{font-size:32px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="title">
+        <h1>小马记账</h1>
+        <p>更适合电脑生意的账本后台：看收入、看采购、看提成、看最近销售，一眼知道这个月到底赚了多少。</p>
+      </div>
+      <div class="btns">
+        <button class="secondary" onclick="setView('all')">看全部</button>
+        <button class="secondary" onclick="setView('business')">只看生意</button>
+        <button class="secondary" onclick="setView('life')">只看生活</button>
+        <button class="secondary" onclick="location.reload()">刷新页面</button>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="hero-main">
+        <div class="eyebrow">当前视图净结余</div>
+        <div class="big" id="heroBalance">$0.00</div>
+        <div class="hero-grid">
+          <div class="hero-mini"><div class="k">本月收入</div><div class="v" id="heroMonthIncome">$0.00</div></div>
+          <div class="hero-mini"><div class="k">本月支出</div><div class="v" id="heroMonthExpense">$0.00</div></div>
+          <div class="hero-mini"><div class="k">最后更新</div><div class="v" id="updatedAt">-</div></div>
+        </div>
+      </div>
+      <div class="hero-side">
+        <h2 class="section-title">视图切换</h2>
+        <div class="sub" style="margin-bottom:12px">把账本拆成“全部 / 生意 / 生活”三种看法，避免生活花销把生意判断搞混。</div>
+        <div class="chip-row" id="viewChips">
+          <div class="chip active" data-view="all" onclick="setView('all')">全部</div>
+          <div class="chip" data-view="business" onclick="setView('business')">生意</div>
+          <div class="chip" data-view="life" onclick="setView('life')">生活</div>
+        </div>
+        <div class="footer-note">默认货币显示统一为 <strong>$</strong>。RMB 结算目前仍保留在账户字段中区分。</div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="label">总收入</div><div class="value income" id="totalIncome">$0.00</div></div>
+      <div class="stat"><div class="label">总支出</div><div class="value expense" id="totalExpense">$0.00</div></div>
+      <div class="stat"><div class="label">总净结余</div><div class="value muted-value" id="totalBalance">$0.00</div></div>
+      <div class="stat"><div class="label">本月净利润</div><div class="value muted-value" id="monthBalance">$0.00</div></div>
+      <div class="stat"><div class="label">总记录数</div><div class="value muted-value" id="entryCount">0</div></div>
+      <div class="stat"><div class="label">今日记录数</div><div class="value muted-value" id="todayCount">0</div></div>
+    </div>
+
+    <div class="layout">
+      <div class="stack">
+        <div class="card">
+          <h2 class="section-title">业务快照</h2>
+          <div class="line-list" id="snapshotList"></div>
+        </div>
+        <div class="card">
+          <h2 class="section-title">分类汇总</h2>
+          <div class="line-list" id="categorySummary"></div>
+        </div>
+        <div class="card">
+          <h2 class="section-title">账户汇总</h2>
+          <div class="line-list" id="accountSummary"></div>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card">
+          <div class="filters">
+            <div>
+              <h2 class="section-title" style="margin-bottom:6px">最近销售 / 收入记录</h2>
+              <div class="tiny">优先把真正卖货、定制、升级这类收入单独提出来，方便扫一眼今天卖了什么。</div>
+            </div>
+          </div>
+          <div class="sales-list" id="salesList"></div>
+        </div>
+
+        <div class="card">
+          <div class="filters">
+            <div>
+              <h2 class="section-title" style="margin-bottom:6px">账单列表</h2>
+              <div class="tiny" id="tableHint">当前显示全部记录</div>
+            </div>
+            <div class="filter-row">
+              <div class="chip active" data-filter="all" onclick="setQuickFilter('all')">全部</div>
+              <div class="chip" data-filter="income" onclick="setQuickFilter('income')">收入</div>
+              <div class="chip" data-filter="expense" onclick="setQuickFilter('expense')">支出</div>
+              <div class="chip" data-filter="sales" onclick="setQuickFilter('sales')">销售</div>
+              <div class="chip" data-filter="commission" onclick="setQuickFilter('commission')">提成</div>
+              <div class="chip" data-filter="procurement" onclick="setQuickFilter('procurement')">采购</div>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>日期</th><th>时间</th><th>类型</th><th>分类</th><th>账户</th><th>金额</th><th>备注</th></tr>
+              </thead>
+              <tbody id="entryTable"></tbody>
+            </table>
+          </div>
+          <div class="footer-note">逻辑：补录旧单时，日期按你指定的成交日，时间暂时沿用消息时间。后面如果你要，我可以再把“成交时间”和“录入时间”彻底拆开。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script>
+const BUSINESS_CATEGORIES = new Set(['生意收入','采购','提成']);
+const LIFE_CATEGORIES = new Set(['日用品','吃饭']);
+let currentView = 'all';
+let quickFilter = 'all';
+
+function currency(v){return `$${Number(v||0).toFixed(2)}`;}
+function isCurrentMonth(dateStr){const d=new Date(dateStr);const now=new Date();return d.getFullYear()===now.getFullYear()&&d.getMonth()===now.getMonth();}
+function isToday(dateStr){const d=new Date(dateStr);const now=new Date();return d.toDateString()===now.toDateString();}
+function typeLabel(t){return t==='income'?'收入':'支出';}
+function noteLooksLikeSale(note=''){return /卖|定制|升级|押金|装\s*1TB|ROG|desktop|笔记本|gaming/i.test(note);}
+function classifyView(e){
+  if (BUSINESS_CATEGORIES.has(e.category) || noteLooksLikeSale(e.note||'')) return 'business';
+  if (LIFE_CATEGORIES.has(e.category)) return 'life';
+  return 'all';
+}
+function getViewEntries(entries){
+  if (currentView==='all') return entries;
+  return entries.filter(e=>classifyView(e)===currentView);
+}
+function getFilteredEntries(entries){
+  const viewEntries = getViewEntries(entries);
+  if (quickFilter==='all') return viewEntries;
+  if (quickFilter==='income') return viewEntries.filter(e=>e.type==='income');
+  if (quickFilter==='expense') return viewEntries.filter(e=>e.type==='expense');
+  if (quickFilter==='sales') return viewEntries.filter(e=>e.type==='income' && noteLooksLikeSale(e.note||''));
+  if (quickFilter==='commission') return viewEntries.filter(e=>e.category==='提成');
+  if (quickFilter==='procurement') return viewEntries.filter(e=>e.category==='采购');
+  return viewEntries;
+}
+function sum(entries, type){return entries.filter(e=>!type || e.type===type).reduce((s,e)=>s+Number(e.amount||0),0);}
+function setChipState(selector, key, value){document.querySelectorAll(selector).forEach(el=>el.classList.toggle('active', el.dataset[key]===value));}
+function setView(view){currentView=view; setChipState('#viewChips .chip','view',view); render();}
+function setQuickFilter(filter){quickFilter=filter; setChipState('.filter-row .chip','filter',filter); render();}
+function buildLineItems(map, emptyText){
+  const items = Object.entries(map).sort((a,b)=>Math.abs(b[1])-Math.abs(a[1]));
+  if(!items.length) return `<div class="sub">${emptyText}</div>`;
+  const max = Math.max(...items.map(x=>Math.abs(x[1])),1);
+  return items.map(([k,v])=>`<div class="line-item"><div class="left"><div class="name">${k}</div><div class="bar-wrap"><div class="bar" style="width:${Math.max((Math.abs(v)/max)*100,8)}%"></div></div></div><div class="amount ${v>=0?'income':'expense'}">${v>=0?'+':'-'}${currency(Math.abs(v))}</div></div>`).join('');
+}
+function render(){
+  const data = window.__LEDGER_DATA__ || {updatedAt:'-', entries:[]};
+  const entries = [...(data.entries||[])].sort((a,b)=>{
+    const ad = `${a.date} ${a.time||'00:00'}`;
+    const bd = `${b.date} ${b.time||'00:00'}`;
+    return new Date(bd.replace(' ', 'T')) - new Date(ad.replace(' ', 'T')) || String(b.id).localeCompare(String(a.id));
+  });
+  const viewEntries = getViewEntries(entries);
+  const tableEntries = getFilteredEntries(entries);
+  const monthEntries = viewEntries.filter(e=>isCurrentMonth(e.date));
+
+  const totalIncome = sum(viewEntries,'income');
+  const totalExpense = sum(viewEntries,'expense');
+  const totalBalance = totalIncome - totalExpense;
+  const monthIncome = sum(monthEntries,'income');
+  const monthExpense = sum(monthEntries,'expense');
+  const monthBalance = monthIncome - monthExpense;
+
+  document.getElementById('updatedAt').textContent = data.updatedAt || '-';
+  document.getElementById('heroBalance').textContent = currency(monthBalance);
+  document.getElementById('heroMonthIncome').textContent = currency(monthIncome);
+  document.getElementById('heroMonthExpense').textContent = currency(monthExpense);
+  document.getElementById('totalIncome').textContent = currency(totalIncome);
+  document.getElementById('totalExpense').textContent = currency(totalExpense);
+  document.getElementById('totalBalance').textContent = currency(totalBalance);
+  document.getElementById('monthBalance').textContent = currency(monthBalance);
+  document.getElementById('entryCount').textContent = viewEntries.length;
+  document.getElementById('todayCount').textContent = viewEntries.filter(e=>isToday(e.date)).length;
+  document.getElementById('tableHint').textContent = `当前视图：${currentView==='all'?'全部':currentView==='business'?'生意':'生活'} · 当前筛选：${({all:'全部',income:'收入',expense:'支出',sales:'销售',commission:'提成',procurement:'采购'})[quickFilter]}`;
+
+  const expenseEntries = monthEntries.filter(e=>e.type==='expense');
+  const incomeEntries = monthEntries.filter(e=>e.type==='income');
+  const avgExpense = expenseEntries.length ? sum(expenseEntries)/expenseEntries.length : 0;
+  const salesCount = incomeEntries.filter(e=>noteLooksLikeSale(e.note||'')).length;
+  const commissionTotal = expenseEntries.filter(e=>e.category==='提成').reduce((s,e)=>s+Number(e.amount),0);
+  const procurementTotal = expenseEntries.filter(e=>e.category==='采购').reduce((s,e)=>s+Number(e.amount),0);
+  document.getElementById('snapshotList').innerHTML = [
+    ['本月销售单数', `${salesCount} 单`, '只统计看起来像卖货/定制/升级的收入'],
+    ['平均每笔支出', currency(avgExpense), '当前视图下本月支出均值'],
+    ['本月采购金额', currency(procurementTotal), '采购类支出合计'],
+    ['本月提成金额', currency(commissionTotal), '提成类支出合计']
+  ].map(([name,val,meta])=>`<div class="line-item"><div class="left"><div class="name">${name}</div><div class="meta">${meta}</div></div><div class="amount">${val}</div></div>`).join('');
+
+  const categoryMap = {};
+  const accountMap = {};
+  monthEntries.forEach(e=>{
+    const signed = e.type==='income' ? Number(e.amount) : -Number(e.amount);
+    categoryMap[e.category] = (categoryMap[e.category]||0)+signed;
+    accountMap[e.account] = (accountMap[e.account]||0)+signed;
+  });
+  document.getElementById('categorySummary').innerHTML = buildLineItems(categoryMap,'这个视图下本月还没有分类数据。');
+  document.getElementById('accountSummary').innerHTML = buildLineItems(accountMap,'这个视图下本月还没有账户数据。');
+
+  const salesEntries = viewEntries.filter(e=>e.type==='income').filter(e=>noteLooksLikeSale(e.note||'')).slice(0,6);
+  document.getElementById('salesList').innerHTML = salesEntries.length ? salesEntries.map(e=>`<div class="sale"><div class="sale-top"><span class="tag income">收入</span><span class="amount income">+${currency(e.amount)}</span></div><div class="sale-note">${e.note||'-'}</div><div class="sale-meta">${e.date} ${e.time||'-'} · ${e.category} · ${e.account}</div></div>`).join('') : '<div class="sub">这个视图下暂时没有可识别的销售收入记录。</div>';
+
+  document.getElementById('entryTable').innerHTML = tableEntries.length ? tableEntries.map(e=>`<tr><td>${e.date}</td><td>${e.time||'-'}</td><td><span class="tag ${e.type}">${typeLabel(e.type)}</span></td><td>${e.category}</td><td>${e.account}</td><td class="amount ${e.type==='income'?'income':'expense'}">${e.type==='income'?'+':'-'}${currency(e.amount)}</td><td class="note">${e.note||'-'}</td></tr>`).join('') : `<tr><td colspan="7">暂无记录</td></tr>`;
+}
+render();
+setInterval(()=>location.reload(), 30000);
+</script>
+</body>
+</html>
