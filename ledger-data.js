@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-03-17 11:26 EDT",
+  updatedAt: "2026-03-17 12:52 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -390,6 +390,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "银行卡",
       note: "采购 TUF B850M-E 主板"
+    },
+    {
+      id: "20260317-2",
+      type: "expense",
+      amount: 38.00,
+      date: "2026-03-17",
+      time: "12:52",
+      category: "吃饭",
+      account: "信用卡",
+      note: "买咖啡"
     }
   ]
 };
