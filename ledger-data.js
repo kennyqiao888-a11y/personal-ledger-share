@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-03-17 12:52 EDT",
+  updatedAt: "2026-03-17 17:06 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -60,16 +60,6 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "信用卡",
       note: "在 CC 买机箱和水冷，税后一共 135.46"
-    },
-    {
-      id: "20260313-7",
-      type: "income",
-      amount: 400.00,
-      date: "2026-03-13",
-      time: "11:30",
-      category: "生意收入",
-      account: "银行卡",
-      note: "收到 EMT 租电脑押金"
     },
     {
       id: "20260313-8",
