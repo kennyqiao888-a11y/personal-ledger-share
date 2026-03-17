@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-03-17 17:21 EDT",
+  updatedAt: "2026-03-17 17:22 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -399,7 +399,7 @@ window.__LEDGER_DATA__ = {
       time: "17:21",
       category: "工资",
       account: "现金",
-      note: "领工资"
+      note: "领工资（欠1月2月）"
     }
   ]
 };
