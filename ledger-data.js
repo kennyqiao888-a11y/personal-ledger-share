@@ -408,7 +408,7 @@ window.__LEDGER_DATA__ = {
       date: "2026-03-18",
       time: "13:32",
       category: "生意收入",
-      account: "现金",
+      account: "银行卡",
       note: "修 ROG 笔记本电脑"
     },
     {
