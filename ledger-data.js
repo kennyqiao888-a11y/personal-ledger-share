@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-03-18 14:08 EDT",
+  updatedAt: "2026-03-18 16:14 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -460,6 +460,16 @@ window.__LEDGER_DATA__ = {
       category: "吃饭",
       account: "现金",
       note: "买 coffee"
+    },
+    {
+      id: "20260318-7",
+      type: "expense",
+      amount: 136.00,
+      date: "2026-03-18",
+      time: "16:14",
+      category: "电话费",
+      account: "银行卡",
+      note: "Fido 电话费"
     }
   ]
 };
