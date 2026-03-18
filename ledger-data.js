@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-03-18 16:56 EDT",
+  updatedAt: "2026-03-18 19:54 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -480,6 +480,16 @@ window.__LEDGER_DATA__ = {
       category: "报税",
       account: "其他",
       note: "报税（RMB 支出）"
+    },
+    {
+      id: "20260318-9",
+      type: "expense",
+      amount: 65.00,
+      date: "2026-03-18",
+      time: "19:54",
+      category: "吃饭",
+      account: "现金",
+      note: "买汉堡"
     }
   ]
 };
