@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-03-18 13:36 EDT",
+  updatedAt: "2026-03-18 13:39 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -440,6 +440,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "银行卡",
       note: "卖 ROG 太阳神 3080"
+    },
+    {
+      id: "20260318-5",
+      type: "income",
+      amount: 1095.00,
+      date: "2026-03-18",
+      time: "13:39",
+      category: "生意收入",
+      account: "银行卡",
+      note: "卖 9800X3D + TUF B850M-E"
     }
   ]
 };
