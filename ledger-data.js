@@ -410,6 +410,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "现金",
       note: "修 ROG 笔记本电脑"
+    },
+    {
+      id: "20260318-2",
+      type: "expense",
+      amount: 450.00,
+      date: "2026-03-18",
+      time: "13:32",
+      category: "采购",
+      account: "银行卡",
+      note: "采购 ROG 3070Ti 笔记本电脑"
     }
   ]
 };
