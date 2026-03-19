@@ -530,6 +530,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "现金",
       note: "卖 HP 3060Ti gaming desktop"
+    },
+    {
+      id: "20260318-14",
+      type: "expense",
+      amount: 80.00,
+      date: "2026-03-18",
+      time: "21:33",
+      category: "提成",
+      account: "现金",
+      note: "提成"
     }
   ]
 };
