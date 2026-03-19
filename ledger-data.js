@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-03-18 21:32 EDT",
+  updatedAt: "2026-03-18 21:33 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -520,6 +520,16 @@ window.__LEDGER_DATA__ = {
       category: "提成",
       account: "现金",
       note: "提成"
+    },
+    {
+      id: "20260318-13",
+      type: "income",
+      amount: 800.00,
+      date: "2026-03-18",
+      time: "21:33",
+      category: "生意收入",
+      account: "现金",
+      note: "卖 HP 3060Ti gaming desktop"
     }
   ]
 };
