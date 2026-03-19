@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-03-18 21:33 EDT",
+  updatedAt: "2026-03-18 23:17 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -540,6 +540,16 @@ window.__LEDGER_DATA__ = {
       category: "提成",
       account: "现金",
       note: "提成"
+    },
+    {
+      id: "20260318-15",
+      type: "expense",
+      amount: 5050.00,
+      date: "2026-03-18",
+      time: "23:17",
+      category: "采购",
+      account: "现金",
+      note: "采购 HP 3060、外星人 3060、太阳神 3080、9800X3D、32G DDR5"
     }
   ]
 };
