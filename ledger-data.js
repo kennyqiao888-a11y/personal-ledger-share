@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-03-18 20:10 EDT",
+  updatedAt: "2026-03-18 21:32 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -500,6 +500,16 @@ window.__LEDGER_DATA__ = {
       category: "转账",
       account: "银行卡",
       note: "return calla"
+    },
+    {
+      id: "20260318-11",
+      type: "income",
+      amount: 2100.00,
+      date: "2026-03-18",
+      time: "21:32",
+      category: "生意收入",
+      account: "现金",
+      note: "卖 i9-13900 + 4070Ti"
     }
   ]
 };
