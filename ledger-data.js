@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-03-19 11:04 EDT",
+  updatedAt: "2026-03-20 18:09 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -560,6 +560,16 @@ window.__LEDGER_DATA__ = {
       category: "加油",
       account: "现金",
       note: "加油"
+    },
+    {
+      id: "20260320-1",
+      type: "income",
+      amount: 750.00,
+      date: "2026-03-20",
+      time: "18:09",
+      category: "生意收入",
+      account: "现金",
+      note: "收 9800X3D + 32G DDR5，主板/CPU/内存抵了 400"
     }
   ]
 };
