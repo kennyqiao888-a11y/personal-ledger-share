@@ -136,6 +136,10 @@
           <h2 class="section-title">账户汇总</h2>
           <div class="line-list" id="accountSummary"></div>
         </div>
+        <div class="card">
+          <h2 class="section-title">账户正负值</h2>
+          <div class="line-list" id="accountFlowSummary"></div>
+        </div>
       </div>
 
       <div class="stack">
@@ -262,13 +266,22 @@ function render(){
 
   const categoryMap = {};
   const accountMap = {};
+  const accountFlowMap = {};
   monthEntries.forEach(e=>{
     const signed = e.type==='income' ? Number(e.amount) : -Number(e.amount);
     categoryMap[e.category] = (categoryMap[e.category]||0)+signed;
     accountMap[e.account] = (accountMap[e.account]||0)+signed;
+    if(!accountFlowMap[e.account]) accountFlowMap[e.account] = {income:0, expense:0};
+    if(e.type==='income') accountFlowMap[e.account].income += Number(e.amount);
+    else accountFlowMap[e.account].expense += Number(e.amount);
   });
   document.getElementById('categorySummary').innerHTML = buildLineItems(categoryMap,'这个视图下本月还没有分类数据。');
   document.getElementById('accountSummary').innerHTML = buildLineItems(accountMap,'这个视图下本月还没有账户数据。');
+  const accountFlowItems = Object.entries(accountFlowMap).sort((a,b)=>((b[1].income-b[1].expense)-(a[1].income-a[1].expense)));
+  document.getElementById('accountFlowSummary').innerHTML = accountFlowItems.length ? accountFlowItems.map(([name,flow])=>{
+    const net = flow.income - flow.expense;
+    return `<div class="line-item"><div class="left"><div class="name">${name}</div><div class="meta">收入 +${currency(flow.income)} · 支出 -${currency(flow.expense)}</div></div><div class="amount ${net>=0?'income':'expense'}">${net>=0?'+':'-'}${currency(Math.abs(net))}</div></div>`;
+  }).join('') : '<div class="sub">这个视图下本月还没有账户正负值数据。</div>';
 
   const salesEntries = viewEntries.filter(e=>e.type==='income').filter(e=>noteLooksLikeSale(e.note||'')).slice(0,6);
   document.getElementById('salesList').innerHTML = salesEntries.length ? salesEntries.map(e=>`<div class="sale"><div class="sale-top"><span class="tag income">收入</span><span class="amount income">+${currency(e.amount)}</span></div><div class="sale-note">${e.note||'-'}</div><div class="sale-meta">${e.date} ${e.time||'-'} · ${e.category} · ${e.account}</div></div>`).join('') : '<div class="sub">这个视图下暂时没有可识别的销售收入记录。</div>';
