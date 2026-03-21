@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-03-21 16:16 EDT",
+  updatedAt: "2026-03-21 17:48 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -590,6 +590,16 @@ window.__LEDGER_DATA__ = {
       category: "加油",
       account: "银行卡",
       note: "加油"
+    },
+    {
+      id: "20260321-2",
+      type: "expense",
+      amount: 200.00,
+      date: "2026-03-21",
+      time: "17:48",
+      category: "日用品",
+      account: "现金",
+      note: "Walmart 生活用品"
     }
   ]
 };
