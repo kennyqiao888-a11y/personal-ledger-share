@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-03-23 16:30 EDT",
+  updatedAt: "2026-03-23 18:00 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -620,6 +620,26 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "银行卡",
       note: "收设计费定金"
+    },
+    {
+      id: "20260323-3",
+      type: "expense",
+      amount: 550.00,
+      date: "2026-03-23",
+      time: "18:00",
+      category: "采购",
+      account: "现金",
+      note: "回收 i5-13600KF + 4070 Super + 3 个显示器（现金部分）"
+    },
+    {
+      id: "20260323-4",
+      type: "expense",
+      amount: 1000.00,
+      date: "2026-03-23",
+      time: "18:00",
+      category: "采购",
+      account: "银行卡",
+      note: "回收 i5-13600KF + 4070 Super + 3 个显示器（银行卡转账部分）"
     }
   ]
 };
