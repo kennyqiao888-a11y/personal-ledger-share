@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-03-21 17:48 EDT",
+  updatedAt: "2026-03-23 16:23 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -600,6 +600,16 @@ window.__LEDGER_DATA__ = {
       category: "日用品",
       account: "现金",
       note: "Walmart 生活用品"
+    },
+    {
+      id: "20260323-1",
+      type: "expense",
+      amount: 160.00,
+      date: "2026-03-23",
+      time: "16:23",
+      category: "采购",
+      account: "现金",
+      note: "采购 850W 电源"
     }
   ]
 };
