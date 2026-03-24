@@ -624,7 +624,7 @@ window.__LEDGER_DATA__ = {
     {
       id: "20260323-3",
       type: "expense",
-      amount: 450.00,
+      amount: 550.00,
       date: "2026-03-23",
       time: "18:00",
       category: "采购",
