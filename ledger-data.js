@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-03-25 10:56 EDT",
+  updatedAt: "2026-03-25 20:01 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -670,6 +670,16 @@ window.__LEDGER_DATA__ = {
       category: "加油",
       account: "银行卡",
       note: "加油"
+    },
+    {
+      id: "20260325-3",
+      type: "income",
+      amount: 1550.00,
+      date: "2026-03-25",
+      time: "20:01",
+      category: "生意收入",
+      account: "现金",
+      note: "卖 R7-5800X + 5060"
     }
   ]
 };
