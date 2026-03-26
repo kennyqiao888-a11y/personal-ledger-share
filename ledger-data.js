@@ -680,6 +680,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "现金",
       note: "卖 R7-5800X + 5060"
+    },
+    {
+      id: "20260325-4",
+      type: "expense",
+      amount: 1680.00,
+      date: "2026-03-25",
+      time: "20:01",
+      category: "采购",
+      account: "银行卡",
+      note: "买 Asus Prime 5080"
     }
   ]
 };
