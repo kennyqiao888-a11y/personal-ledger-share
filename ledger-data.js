@@ -690,6 +690,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "银行卡",
       note: "买 Asus Prime 5080"
+    },
+    {
+      id: "20260325-5",
+      type: "expense",
+      amount: 25.00,
+      date: "2026-03-25",
+      time: "20:01",
+      category: "吃饭",
+      account: "现金",
+      note: "买冒菜"
     }
   ]
 };
