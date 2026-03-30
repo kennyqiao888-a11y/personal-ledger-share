@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-03-26 16:52 EDT",
+  updatedAt: "2026-03-30 10:49 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -730,6 +730,16 @@ window.__LEDGER_DATA__ = {
       category: "养车",
       account: "银行卡",
       note: "换机油"
+    },
+    {
+      id: "20260330-1",
+      type: "expense",
+      amount: 740.00,
+      date: "2026-03-30",
+      time: "10:49",
+      category: "电费",
+      account: "银行卡",
+      note: "交电费"
     }
   ]
 };
