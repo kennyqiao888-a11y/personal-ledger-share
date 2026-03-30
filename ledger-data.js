@@ -740,6 +740,16 @@ window.__LEDGER_DATA__ = {
       category: "电费",
       account: "银行卡",
       note: "交电费"
+    },
+    {
+      id: "20260330-2",
+      type: "expense",
+      amount: 60.00,
+      date: "2026-03-30",
+      time: "10:49",
+      category: "吃饭",
+      account: "现金",
+      note: "西安风味"
     }
   ]
 };
