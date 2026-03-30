@@ -750,6 +750,16 @@ window.__LEDGER_DATA__ = {
       category: "吃饭",
       account: "现金",
       note: "西安风味"
+    },
+    {
+      id: "20260330-3",
+      type: "income",
+      amount: 195.00,
+      date: "2026-03-30",
+      time: "10:49",
+      category: "生意收入",
+      account: "银行卡",
+      note: "换电源"
     }
   ]
 };
