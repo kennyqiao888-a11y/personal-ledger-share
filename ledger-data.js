@@ -790,6 +790,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "银行卡",
       note: "卖键盘 + 64G 内存"
+    },
+    {
+      id: "20260330-7",
+      type: "expense",
+      amount: 350.00,
+      date: "2026-03-30",
+      time: "15:08",
+      category: "采购",
+      account: "银行卡",
+      note: "买键盘"
     }
   ]
 };
