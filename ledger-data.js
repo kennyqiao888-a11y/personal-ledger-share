@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-03-31 16:58 EDT",
+  updatedAt: "2026-03-31 17:00 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -840,6 +840,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "现金",
       note: "卖 T14 Gen6 差价"
+    },
+    {
+      id: "20260331-3",
+      type: "expense",
+      amount: 260.00,
+      date: "2026-03-31",
+      time: "17:00",
+      category: "维修",
+      account: "现金",
+      note: "修外星人笔记本"
     }
   ]
 };
