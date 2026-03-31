@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-03-31 17:00 EDT",
+  updatedAt: "2026-03-31 17:47 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -850,6 +850,16 @@ window.__LEDGER_DATA__ = {
       category: "维修",
       account: "现金",
       note: "修外星人笔记本"
+    },
+    {
+      id: "20260331-4",
+      type: "expense",
+      amount: 1900.00,
+      date: "2026-03-31",
+      time: "17:47",
+      category: "采购",
+      account: "现金",
+      note: "回收 ROG 4070 笔记本 + ROG 3070 台式机"
     }
   ]
 };
