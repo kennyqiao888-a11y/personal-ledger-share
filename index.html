@@ -103,11 +103,15 @@
       </div>
       <div class="hero-side">
         <h2 class="section-title">视图切换</h2>
-        <div class="sub" style="margin-bottom:12px">把账本拆成“全部 / 生意 / 生活”三种看法，避免生活花销把生意判断搞混。</div>
-        <div class="chip-row" id="viewChips">
+        <div class="sub" style="margin-bottom:12px">把账本拆成“全部 / 生意 / 生活”三种看法，避免生活花销把生意判断搞混；再按月份切开，翻账更清楚。</div>
+        <div class="chip-row" id="viewChips" style="margin-bottom:10px">
           <div class="chip active" data-view="all" onclick="setView('all')">全部</div>
           <div class="chip" data-view="business" onclick="setView('business')">生意</div>
           <div class="chip" data-view="life" onclick="setView('life')">生活</div>
+        </div>
+        <div>
+          <div class="sub" style="margin-bottom:8px">月份切换</div>
+          <div class="chip-row" id="monthChips"></div>
         </div>
         <div class="footer-note">默认货币显示统一为 <strong>$</strong>。RMB 结算目前仍保留在账户字段中区分。</div>
       </div>
@@ -186,9 +190,12 @@ const BUSINESS_CATEGORIES = new Set(['生意收入','采购','提成']);
 const LIFE_CATEGORIES = new Set(['日用品','吃饭']);
 let currentView = 'all';
 let quickFilter = 'all';
+let currentMonthKey = null;
 
 function currency(v){return `$${Number(v||0).toFixed(2)}`;}
-function isCurrentMonth(dateStr){const d=new Date(dateStr);const now=new Date();return d.getFullYear()===now.getFullYear()&&d.getMonth()===now.getMonth();}
+function monthKey(dateStr){return String(dateStr||'').slice(0,7);}
+function formatMonthLabel(key){if(!key) return '全部月份'; const [y,m]=key.split('-'); return `${y}-${m}`;}
+function isCurrentMonth(dateStr){const now=new Date(); const key=`${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}`; return monthKey(dateStr)===key;}
 function isToday(dateStr){const d=new Date(dateStr);const now=new Date();return d.toDateString()===now.toDateString();}
 function typeLabel(t){return t==='income'?'收入':'支出';}
 function noteLooksLikeSale(note=''){return /卖|定制|升级|押金|装\s*1TB|ROG|desktop|笔记本|gaming/i.test(note);}
@@ -201,8 +208,12 @@ function getViewEntries(entries){
   if (currentView==='all') return entries;
   return entries.filter(e=>classifyView(e)===currentView);
 }
+function getMonthEntries(entries){
+  if (!currentMonthKey) return entries;
+  return entries.filter(e=>monthKey(e.date)===currentMonthKey);
+}
 function getFilteredEntries(entries){
-  const viewEntries = getViewEntries(entries);
+  const viewEntries = getMonthEntries(getViewEntries(entries));
   if (quickFilter==='all') return viewEntries;
   if (quickFilter==='income') return viewEntries.filter(e=>e.type==='income');
   if (quickFilter==='expense') return viewEntries.filter(e=>e.type==='expense');
@@ -214,6 +225,7 @@ function getFilteredEntries(entries){
 function sum(entries, type){return entries.filter(e=>!type || e.type===type).reduce((s,e)=>s+Number(e.amount||0),0);}
 function setChipState(selector, key, value){document.querySelectorAll(selector).forEach(el=>el.classList.toggle('active', el.dataset[key]===value));}
 function setView(view){currentView=view; setChipState('#viewChips .chip','view',view); render();}
+function setMonth(key){currentMonthKey=key; setChipState('#monthChips .chip','month',key || '__all__'); render();}
 function setQuickFilter(filter){quickFilter=filter; setChipState('.filter-row .chip','filter',filter); render();}
 function buildLineItems(map, emptyText){
   const items = Object.entries(map).sort((a,b)=>Math.abs(b[1])-Math.abs(a[1]));
@@ -228,12 +240,18 @@ function render(){
     const bd = `${b.date} ${b.time||'00:00'}`;
     return new Date(bd.replace(' ', 'T')) - new Date(ad.replace(' ', 'T')) || String(b.id).localeCompare(String(a.id));
   });
-  const viewEntries = getViewEntries(entries);
-  const tableEntries = getFilteredEntries(entries);
-  const monthEntries = viewEntries.filter(e=>isCurrentMonth(e.date));
+  const monthKeys = [...new Set(entries.map(e=>monthKey(e.date)).filter(Boolean))].sort().reverse();
+  if (!currentMonthKey) currentMonthKey = monthKeys[0] || null;
+  if (currentMonthKey && !monthKeys.includes(currentMonthKey)) currentMonthKey = monthKeys[0] || null;
+  document.getElementById('monthChips').innerHTML = monthKeys.map(key=>`<div class="chip ${key===currentMonthKey?'active':''}" data-month="${key}" onclick="setMonth('${key}')">${formatMonthLabel(key)}</div>`).join('') || '<div class="sub">暂无月份数据</div>';
 
-  const totalIncome = sum(viewEntries,'income');
-  const totalExpense = sum(viewEntries,'expense');
+  const viewEntries = getViewEntries(entries);
+  const scopedEntries = getMonthEntries(viewEntries);
+  const tableEntries = getFilteredEntries(entries);
+  const monthEntries = scopedEntries;
+
+  const totalIncome = sum(scopedEntries,'income');
+  const totalExpense = sum(scopedEntries,'expense');
   const totalBalance = totalIncome - totalExpense;
   const monthIncome = sum(monthEntries,'income');
   const monthExpense = sum(monthEntries,'expense');
@@ -247,9 +265,9 @@ function render(){
   document.getElementById('totalExpense').textContent = currency(totalExpense);
   document.getElementById('totalBalance').textContent = currency(totalBalance);
   document.getElementById('monthBalance').textContent = currency(monthBalance);
-  document.getElementById('entryCount').textContent = viewEntries.length;
-  document.getElementById('todayCount').textContent = viewEntries.filter(e=>isToday(e.date)).length;
-  document.getElementById('tableHint').textContent = `当前视图：${currentView==='all'?'全部':currentView==='business'?'生意':'生活'} · 当前筛选：${({all:'全部',income:'收入',expense:'支出',sales:'销售',commission:'提成',procurement:'采购'})[quickFilter]}`;
+  document.getElementById('entryCount').textContent = scopedEntries.length;
+  document.getElementById('todayCount').textContent = scopedEntries.filter(e=>isToday(e.date)).length;
+  document.getElementById('tableHint').textContent = `当前月份：${formatMonthLabel(currentMonthKey)} · 当前视图：${currentView==='all'?'全部':currentView==='business'?'生意':'生活'} · 当前筛选：${({all:'全部',income:'收入',expense:'支出',sales:'销售',commission:'提成',procurement:'采购'})[quickFilter]}`;
 
   const expenseEntries = monthEntries.filter(e=>e.type==='expense');
   const incomeEntries = monthEntries.filter(e=>e.type==='income');
