@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-03-31 20:54 EDT",
+  updatedAt: "2026-03-31 22:05 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -890,6 +890,16 @@ window.__LEDGER_DATA__ = {
       category: "提成",
       account: "现金",
       note: "提成支出"
+    },
+    {
+      id: "20260331-8",
+      type: "income",
+      amount: 90.00,
+      date: "2026-03-31",
+      time: "22:05",
+      category: "生意收入",
+      account: "其他",
+      note: "卖 Go Pro 鼠标（RMB 入账）"
     }
   ]
 };
