@@ -888,7 +888,7 @@ window.__LEDGER_DATA__ = {
       date: "2026-03-31",
       time: "20:54",
       category: "提成",
-      account: "其他",
+      account: "现金",
       note: "提成支出"
     }
   ]
