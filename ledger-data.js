@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-03-31 20:53 EDT",
+  updatedAt: "2026-03-31 20:54 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -880,6 +880,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "现金",
       note: "卖太阳神 i9-13900 + 5070"
+    },
+    {
+      id: "20260331-7",
+      type: "expense",
+      amount: 250.00,
+      date: "2026-03-31",
+      time: "20:54",
+      category: "提成",
+      account: "其他",
+      note: "提成支出"
     }
   ]
 };
