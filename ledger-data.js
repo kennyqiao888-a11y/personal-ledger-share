@@ -920,6 +920,16 @@ window.__LEDGER_DATA__ = {
       category: "加油",
       account: "银行卡",
       note: "加油"
+    },
+    {
+      id: "20260401-3",
+      type: "expense",
+      amount: 980.00,
+      date: "2026-04-01",
+      time: "12:35",
+      category: "采购",
+      account: "现金",
+      note: "拍卖行采购两个屏幕（ROG + G9）"
     }
   ]
 };
