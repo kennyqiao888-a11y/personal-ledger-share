@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-04-01 12:35 EDT",
+  updatedAt: "2026-04-01 22:25 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -930,6 +930,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "现金",
       note: "拍卖行采购两个屏幕（ROG + G9）"
+    },
+    {
+      id: "20260401-4",
+      type: "income",
+      amount: 5000.00,
+      date: "2026-04-01",
+      time: "22:25",
+      category: "生意收入",
+      account: "现金",
+      note: "卖 BO400 9800X3D + 5080"
     }
   ]
 };
