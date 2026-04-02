@@ -940,6 +940,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "现金",
       note: "卖 BO400 9800X3D + 5080"
+    },
+    {
+      id: "20260401-5",
+      type: "expense",
+      amount: 130.00,
+      date: "2026-04-01",
+      time: "22:25",
+      category: "日用品",
+      account: "银行卡",
+      note: "T&T 买菜"
     }
   ]
 };
