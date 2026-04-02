@@ -950,6 +950,16 @@ window.__LEDGER_DATA__ = {
       category: "日用品",
       account: "银行卡",
       note: "T&T 买菜"
+    },
+    {
+      id: "20260401-6",
+      type: "expense",
+      amount: 250.00,
+      date: "2026-04-01",
+      time: "22:26",
+      category: "提成",
+      account: "现金",
+      note: "提成支出"
     }
   ]
 };
