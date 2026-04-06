@@ -1030,6 +1030,16 @@ window.__LEDGER_DATA__ = {
       category: "吃饭",
       account: "现金",
       note: "好兄弟吃饭"
+    },
+    {
+      id: "20260406-2",
+      type: "expense",
+      amount: 95.00,
+      date: "2026-04-06",
+      time: "17:41",
+      category: "采购",
+      account: "现金",
+      note: "买 650W 电源"
     }
   ]
 };
