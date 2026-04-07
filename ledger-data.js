@@ -1090,6 +1090,16 @@ window.__LEDGER_DATA__ = {
       category: "加油",
       account: "银行卡",
       note: "加油"
+    },
+    {
+      id: "20260407-2",
+      type: "expense",
+      amount: 35.00,
+      date: "2026-04-07",
+      time: "10:17",
+      category: "日用品",
+      account: "银行卡",
+      note: "超市"
     }
   ]
 };
