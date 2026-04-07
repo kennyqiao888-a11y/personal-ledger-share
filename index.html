@@ -164,6 +164,7 @@
               <div class="tiny" id="tableHint">当前显示全部记录</div>
             </div>
             <div class="filter-row">
+              <div class="chip" id="entryToggleChip" onclick="toggleEntries()">显示全部</div>
               <div class="chip active" data-filter="all" onclick="setQuickFilter('all')">全部</div>
               <div class="chip" data-filter="income" onclick="setQuickFilter('income')">收入</div>
               <div class="chip" data-filter="expense" onclick="setQuickFilter('expense')">支出</div>
@@ -191,6 +192,8 @@ const LIFE_CATEGORIES = new Set(['日用品','吃饭']);
 let currentView = 'all';
 let quickFilter = 'all';
 let currentMonthKey = null;
+let showAllEntries = false;
+const DEFAULT_ENTRY_LIMIT = 20;
 
 function currency(v){return `$${Number(v||0).toFixed(2)}`;}
 function monthKey(dateStr){return String(dateStr||'').slice(0,7);}
@@ -225,8 +228,9 @@ function getFilteredEntries(entries){
 function sum(entries, type){return entries.filter(e=>!type || e.type===type).reduce((s,e)=>s+Number(e.amount||0),0);}
 function setChipState(selector, key, value){document.querySelectorAll(selector).forEach(el=>el.classList.toggle('active', el.dataset[key]===value));}
 function setView(view){currentView=view; setChipState('#viewChips .chip','view',view); render();}
-function setMonth(key){currentMonthKey=key; setChipState('#monthChips .chip','month',key || '__all__'); render();}
-function setQuickFilter(filter){quickFilter=filter; setChipState('.filter-row .chip','filter',filter); render();}
+function setMonth(key){currentMonthKey=key; showAllEntries=false; setChipState('#monthChips .chip','month',key || '__all__'); render();}
+function setQuickFilter(filter){quickFilter=filter; showAllEntries=false; setChipState('.filter-row .chip','filter',filter); render();}
+function toggleEntries(){showAllEntries=!showAllEntries; render();}
 function buildLineItems(map, emptyText){
   const items = Object.entries(map).sort((a,b)=>Math.abs(b[1])-Math.abs(a[1]));
   if(!items.length) return `<div class="sub">${emptyText}</div>`;
@@ -247,7 +251,9 @@ function render(){
 
   const viewEntries = getViewEntries(entries);
   const scopedEntries = getMonthEntries(viewEntries);
-  const tableEntries = getFilteredEntries(entries);
+  const filteredTableEntries = getFilteredEntries(entries);
+  const tableEntries = showAllEntries ? filteredTableEntries : filteredTableEntries.slice(0, DEFAULT_ENTRY_LIMIT);
+  const hiddenEntryCount = Math.max(filteredTableEntries.length - tableEntries.length, 0);
   const monthEntries = scopedEntries;
 
   const totalIncome = sum(scopedEntries,'income');
@@ -267,7 +273,13 @@ function render(){
   document.getElementById('monthBalance').textContent = currency(monthBalance);
   document.getElementById('entryCount').textContent = scopedEntries.length;
   document.getElementById('todayCount').textContent = scopedEntries.filter(e=>isToday(e.date)).length;
-  document.getElementById('tableHint').textContent = `当前月份：${formatMonthLabel(currentMonthKey)} · 当前视图：${currentView==='all'?'全部':currentView==='business'?'生意':'生活'} · 当前筛选：${({all:'全部',income:'收入',expense:'支出',sales:'销售',commission:'提成',procurement:'采购'})[quickFilter]}`;
+  document.getElementById('tableHint').textContent = `当前月份：${formatMonthLabel(currentMonthKey)} · 当前视图：${currentView==='all'?'全部':currentView==='business'?'生意':'生活'} · 当前筛选：${({all:'全部',income:'收入',expense:'支出',sales:'销售',commission:'提成',procurement:'采购'})[quickFilter]} · 当前显示：${tableEntries.length}${hiddenEntryCount ? ` / ${filteredTableEntries.length}` : ''}`;
+  const toggleChip = document.getElementById('entryToggleChip');
+  if (toggleChip) {
+    toggleChip.textContent = showAllEntries ? '收起到20条' : `显示全部${hiddenEntryCount ? `（+${hiddenEntryCount}）` : ''}`;
+    toggleChip.classList.toggle('active', showAllEntries);
+    toggleChip.style.display = filteredTableEntries.length > DEFAULT_ENTRY_LIMIT ? 'inline-flex' : 'none';
+  }
 
   const expenseEntries = monthEntries.filter(e=>e.type==='expense');
   const incomeEntries = monthEntries.filter(e=>e.type==='income');
