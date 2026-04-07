@@ -1070,6 +1070,16 @@ window.__LEDGER_DATA__ = {
       category: "提成",
       account: "银行卡",
       note: "提成支出"
+    },
+    {
+      id: "20260406-6",
+      type: "income",
+      amount: 100.00,
+      date: "2026-04-06",
+      time: "20:34",
+      category: "生意收入",
+      account: "现金",
+      note: "卖电源"
     }
   ]
 };
