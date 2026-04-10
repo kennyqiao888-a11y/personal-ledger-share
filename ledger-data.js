@@ -1110,6 +1110,16 @@ window.__LEDGER_DATA__ = {
       category: "加油",
       account: "现金",
       note: "加油"
+    },
+    {
+      id: "20260410-2",
+      type: "expense",
+      amount: 4200.00,
+      date: "2026-04-10",
+      time: "12:00",
+      category: "采购",
+      account: "现金",
+      note: "买 i9-13900K + 4090"
     }
   ]
 };
