@@ -1120,6 +1120,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "现金",
       note: "买 i9-13900K + 4090"
+    },
+    {
+      id: "20260410-3",
+      type: "expense",
+      amount: 550.00,
+      date: "2026-04-10",
+      time: "12:00",
+      category: "采购",
+      account: "现金",
+      note: "买 Alienware 3070 Laptop"
     }
   ]
 };
