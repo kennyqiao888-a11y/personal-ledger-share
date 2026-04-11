@@ -1140,6 +1140,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "现金",
       note: "买 NAS"
+    },
+    {
+      id: "20260410-5",
+      type: "expense",
+      amount: 45.00,
+      date: "2026-04-10",
+      time: "20:50",
+      category: "日用品",
+      account: "现金",
+      note: "买刮胡刀"
     }
   ]
 };
