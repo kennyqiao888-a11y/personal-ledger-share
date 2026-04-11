@@ -1150,6 +1150,16 @@ window.__LEDGER_DATA__ = {
       category: "日用品",
       account: "现金",
       note: "买刮胡刀"
+    },
+    {
+      id: "20260410-6",
+      type: "expense",
+      amount: 100.00,
+      date: "2026-04-10",
+      time: "20:50",
+      category: "加油",
+      account: "银行卡",
+      note: "加油"
     }
   ]
 };
