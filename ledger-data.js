@@ -1190,6 +1190,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "现金",
       note: "卖 i9-14900K + 5080（现金部分）"
+    },
+    {
+      id: "20260410-10",
+      type: "expense",
+      amount: 400.00,
+      date: "2026-04-10",
+      time: "20:51",
+      category: "提成",
+      account: "现金",
+      note: "提成支出"
     }
   ]
 };
