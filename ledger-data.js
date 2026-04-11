@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-04-10 20:49 EDT",
+  updatedAt: "2026-04-11 01:09 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -1200,6 +1200,16 @@ window.__LEDGER_DATA__ = {
       category: "提成",
       account: "现金",
       note: "提成支出"
+    },
+    {
+      id: "20260411-1",
+      type: "expense",
+      amount: 250.00,
+      date: "2026-04-11",
+      time: "01:09",
+      category: "采购",
+      account: "现金",
+      note: "买鼠标 GPW5"
     }
   ]
 };
