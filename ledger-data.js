@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-04-11 01:09 EDT",
+  updatedAt: "2026-04-11 15:22 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -1210,6 +1210,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "现金",
       note: "买鼠标 GPW5"
+    },
+    {
+      id: "20260411-2",
+      type: "income",
+      amount: 2500.00,
+      date: "2026-04-11",
+      time: "15:22",
+      category: "生意收入",
+      account: "银行卡",
+      note: "卖 Legion Ultra7 + 4070Ti Super"
     }
   ]
 };
