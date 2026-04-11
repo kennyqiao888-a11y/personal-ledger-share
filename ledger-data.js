@@ -1160,6 +1160,16 @@ window.__LEDGER_DATA__ = {
       category: "加油",
       account: "银行卡",
       note: "加油"
+    },
+    {
+      id: "20260410-7",
+      type: "expense",
+      amount: 750.00,
+      date: "2026-04-10",
+      time: "20:50",
+      category: "采购",
+      account: "银行卡",
+      note: "买卓威显示器"
     }
   ]
 };
