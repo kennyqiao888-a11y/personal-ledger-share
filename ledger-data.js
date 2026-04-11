@@ -1170,6 +1170,26 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "银行卡",
       note: "买卓威显示器"
+    },
+    {
+      id: "20260410-8",
+      type: "income",
+      amount: 3970.00,
+      date: "2026-04-10",
+      time: "20:51",
+      category: "生意收入",
+      account: "银行卡",
+      note: "卖 i9-14900K + 5080（银行卡部分）"
+    },
+    {
+      id: "20260410-9",
+      type: "income",
+      amount: 1000.00,
+      date: "2026-04-10",
+      time: "20:51",
+      category: "生意收入",
+      account: "现金",
+      note: "卖 i9-14900K + 5080（现金部分）"
     }
   ]
 };
