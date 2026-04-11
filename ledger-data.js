@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-04-10 11:58 EDT",
+  updatedAt: "2026-04-10 20:49 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -1130,6 +1130,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "现金",
       note: "买 Alienware 3070 Laptop"
+    },
+    {
+      id: "20260410-4",
+      type: "expense",
+      amount: 175.00,
+      date: "2026-04-10",
+      time: "20:49",
+      category: "采购",
+      account: "现金",
+      note: "买 NAS"
     }
   ]
 };
