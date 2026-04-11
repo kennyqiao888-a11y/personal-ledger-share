@@ -1230,6 +1230,16 @@ window.__LEDGER_DATA__ = {
       category: "日用品",
       account: "现金",
       note: "Winner 购物"
+    },
+    {
+      id: "20260411-4",
+      type: "expense",
+      amount: 240.00,
+      date: "2026-04-11",
+      time: "17:49",
+      category: "日用品",
+      account: "现金",
+      note: "韩国超市购物"
     }
   ]
 };
