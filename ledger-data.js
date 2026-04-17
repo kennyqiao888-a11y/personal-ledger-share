@@ -1280,6 +1280,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "银行卡",
       note: "卖 i9-13900 + 5070"
+    },
+    {
+      id: "20260417-5",
+      type: "expense",
+      amount: 300.00,
+      date: "2026-04-17",
+      time: "11:26",
+      category: "提成",
+      account: "银行卡",
+      note: "提成支出"
     }
   ]
 };
