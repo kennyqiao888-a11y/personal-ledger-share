@@ -1300,6 +1300,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "现金",
       note: "卖 7800X3D + 5070"
+    },
+    {
+      id: "20260417-7",
+      type: "expense",
+      amount: 250.00,
+      date: "2026-04-17",
+      time: "11:27",
+      category: "提成",
+      account: "现金",
+      note: "提成支出"
     }
   ]
 };
