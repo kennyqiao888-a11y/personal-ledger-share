@@ -1343,11 +1343,11 @@ window.__LEDGER_DATA__ = {
     },
     {
       id: "20260417-11",
-      type: "income",
+      type: "expense",
       amount: 1500.00,
       date: "2026-04-17",
       time: "12:08",
-      category: "其他收入",
+      category: "其他支出",
       account: "银行卡",
       note: "分红"
     }
