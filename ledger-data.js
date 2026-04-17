@@ -1250,6 +1250,26 @@ window.__LEDGER_DATA__ = {
       category: "养车",
       account: "银行卡",
       note: "赎车费"
+    },
+    {
+      id: "20260417-2",
+      type: "expense",
+      amount: 2200.00,
+      date: "2026-04-17",
+      time: "11:23",
+      category: "采购",
+      account: "银行卡",
+      note: "买 4090 主机（银行卡部分）"
+    },
+    {
+      id: "20260417-3",
+      type: "expense",
+      amount: 1300.00,
+      date: "2026-04-17",
+      time: "11:23",
+      category: "采购",
+      account: "现金",
+      note: "买 4090 主机（现金部分）"
     }
   ]
 };
