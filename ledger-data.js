@@ -1320,6 +1320,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "银行卡",
       note: "定制主机订金"
+    },
+    {
+      id: "20260417-9",
+      type: "expense",
+      amount: 130.00,
+      date: "2026-04-17",
+      time: "11:38",
+      category: "采购",
+      account: "银行卡",
+      note: "买配件"
     }
   ]
 };
