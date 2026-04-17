@@ -1270,6 +1270,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "现金",
       note: "买 4090 主机（现金部分）"
+    },
+    {
+      id: "20260417-4",
+      type: "income",
+      amount: 2560.00,
+      date: "2026-04-17",
+      time: "11:26",
+      category: "生意收入",
+      account: "银行卡",
+      note: "卖 i9-13900 + 5070"
     }
   ]
 };
