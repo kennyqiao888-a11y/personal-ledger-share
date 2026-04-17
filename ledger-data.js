@@ -1290,6 +1290,16 @@ window.__LEDGER_DATA__ = {
       category: "提成",
       account: "银行卡",
       note: "提成支出"
+    },
+    {
+      id: "20260417-6",
+      type: "income",
+      amount: 2100.00,
+      date: "2026-04-17",
+      time: "11:27",
+      category: "生意收入",
+      account: "现金",
+      note: "卖 7800X3D + 5070"
     }
   ]
 };
