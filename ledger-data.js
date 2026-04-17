@@ -1330,6 +1330,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "银行卡",
       note: "买配件"
+    },
+    {
+      id: "20260417-10",
+      type: "expense",
+      amount: 100.00,
+      date: "2026-04-17",
+      time: "11:38",
+      category: "采购",
+      account: "银行卡",
+      note: "买配件"
     }
   ]
 };
