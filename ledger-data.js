@@ -1390,6 +1390,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "银行卡",
       note: "卖 7800X3D + 5070Ti（银行卡部分）"
+    },
+    {
+      id: "20260418-4",
+      type: "expense",
+      amount: 50.00,
+      date: "2026-04-18",
+      time: "20:22",
+      category: "吃饭",
+      account: "银行卡",
+      note: "羊腿饭"
     }
   ]
 };
