@@ -1409,7 +1409,7 @@ window.__LEDGER_DATA__ = {
       time: "22:15",
       category: "采购",
       account: "银行卡",
-      note: "买主板（ROG B850 / ROG Z790）"
+      note: "买两块主板（ROG B850 + ROG Z790）"
     }
   ]
 };
