@@ -1370,6 +1370,26 @@ window.__LEDGER_DATA__ = {
       category: "吃饭",
       account: "银行卡",
       note: "买奶茶"
+    },
+    {
+      id: "20260418-2",
+      type: "income",
+      amount: 1150.00,
+      date: "2026-04-18",
+      time: "20:19",
+      category: "生意收入",
+      account: "现金",
+      note: "卖 7800X3D + 5070Ti（现金部分）"
+    },
+    {
+      id: "20260418-3",
+      type: "income",
+      amount: 1700.00,
+      date: "2026-04-18",
+      time: "20:19",
+      category: "生意收入",
+      account: "银行卡",
+      note: "卖 7800X3D + 5070Ti（银行卡部分）"
     }
   ]
 };
