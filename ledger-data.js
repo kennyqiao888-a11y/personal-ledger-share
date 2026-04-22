@@ -1430,6 +1430,16 @@ window.__LEDGER_DATA__ = {
       category: "吃饭",
       account: "现金",
       note: "大龙线吃饭"
+    },
+    {
+      id: "20260422-3",
+      type: "expense",
+      amount: 280.00,
+      date: "2026-04-22",
+      time: "15:07",
+      category: "采购",
+      account: "银行卡",
+      note: "Newegg 买配件"
     }
   ]
 };
