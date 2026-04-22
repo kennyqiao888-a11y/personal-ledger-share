@@ -1510,6 +1510,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "银行卡",
       note: "拍卖行买配件"
+    },
+    {
+      id: "20260422-11",
+      type: "expense",
+      amount: 60.00,
+      date: "2026-04-22",
+      time: "15:17",
+      category: "电话费",
+      account: "银行卡",
+      note: "电话费"
     }
   ]
 };
