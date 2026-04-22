@@ -1480,6 +1480,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "现金",
       note: "回收 4060Ti 显卡"
+    },
+    {
+      id: "20260422-8",
+      type: "expense",
+      amount: 500.00,
+      date: "2026-04-22",
+      time: "15:12",
+      category: "采购",
+      account: "现金",
+      note: "回收 9800X3D CPU"
     }
   ]
 };
