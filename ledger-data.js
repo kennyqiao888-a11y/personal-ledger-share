@@ -1530,6 +1530,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "现金",
       note: "给 Kevin 结货款"
+    },
+    {
+      id: "20260422-13",
+      type: "expense",
+      amount: 200.00,
+      date: "2026-04-22",
+      time: "15:25",
+      category: "采购",
+      account: "现金",
+      note: "回收 i7-10700K / 16G / 主板"
     }
   ]
 };
