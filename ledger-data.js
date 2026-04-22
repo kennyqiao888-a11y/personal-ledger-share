@@ -1460,6 +1460,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "现金",
       note: "卖 3070 显卡外星人笔记本"
+    },
+    {
+      id: "20260422-6",
+      type: "expense",
+      amount: 550.00,
+      date: "2026-04-22",
+      time: "15:09",
+      category: "提成",
+      account: "现金",
+      note: "两台的提成"
     }
   ]
 };
