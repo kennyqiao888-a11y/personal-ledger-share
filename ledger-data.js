@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-04-18 22:15 EDT",
+  updatedAt: "2026-04-22 15:05 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -1410,6 +1410,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "银行卡",
       note: "买两块主板（ROG B850 + ROG Z790）"
+    },
+    {
+      id: "20260422-1",
+      type: "income",
+      amount: 2350.00,
+      date: "2026-04-22",
+      time: "15:05",
+      category: "生意收入",
+      account: "现金",
+      note: "客定尾款"
     }
   ]
 };
