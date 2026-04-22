@@ -1490,6 +1490,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "现金",
       note: "回收 9800X3D CPU"
+    },
+    {
+      id: "20260422-9",
+      type: "expense",
+      amount: 50.00,
+      date: "2026-04-22",
+      time: "15:12",
+      category: "日用品",
+      account: "现金",
+      note: "买刮胡刀"
     }
   ]
 };
