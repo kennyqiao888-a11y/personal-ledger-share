@@ -1440,6 +1440,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "银行卡",
       note: "Newegg 买配件"
+    },
+    {
+      id: "20260422-4",
+      type: "expense",
+      amount: 60.00,
+      date: "2026-04-22",
+      time: "15:08",
+      category: "加油",
+      account: "现金",
+      note: "加油"
     }
   ]
 };
