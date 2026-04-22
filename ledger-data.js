@@ -1450,6 +1450,16 @@ window.__LEDGER_DATA__ = {
       category: "加油",
       account: "现金",
       note: "加油"
+    },
+    {
+      id: "20260422-5",
+      type: "income",
+      amount: 1000.00,
+      date: "2026-04-22",
+      time: "15:08",
+      category: "生意收入",
+      account: "现金",
+      note: "卖 3070 显卡外星人笔记本"
     }
   ]
 };
