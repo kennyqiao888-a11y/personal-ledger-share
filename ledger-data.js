@@ -1470,6 +1470,16 @@ window.__LEDGER_DATA__ = {
       category: "提成",
       account: "现金",
       note: "两台的提成"
+    },
+    {
+      id: "20260422-7",
+      type: "expense",
+      amount: 350.00,
+      date: "2026-04-22",
+      time: "15:11",
+      category: "采购",
+      account: "现金",
+      note: "回收 4060Ti 显卡"
     }
   ]
 };
