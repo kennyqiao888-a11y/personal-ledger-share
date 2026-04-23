@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-04-22 17:39 EDT",
+  updatedAt: "2026-04-23 14:34 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -1550,6 +1550,26 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "现金",
       note: "采购显卡"
+    },
+    {
+      id: "20260423-1",
+      type: "income",
+      amount: 620.00,
+      date: "2026-04-23",
+      time: "14:28",
+      category: "生意收入",
+      account: "银行卡",
+      note: "卖 tiny 电脑"
+    },
+    {
+      id: "20260423-2",
+      type: "expense",
+      amount: 450.00,
+      date: "2026-04-23",
+      time: "14:30",
+      category: "其他支出",
+      account: "现金",
+      note: "上缴公司回款 tiny"
     }
   ]
 };
