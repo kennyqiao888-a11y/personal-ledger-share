@@ -1600,6 +1600,16 @@ window.__LEDGER_DATA__ = {
       category: "其他支出",
       account: "现金",
       note: "给代写 3000"
+    },
+    {
+      id: "20260424-3",
+      type: "expense",
+      amount: 35.00,
+      date: "2026-04-24",
+      time: "14:32",
+      category: "吃饭",
+      account: "现金",
+      note: "买糖葫芦"
     }
   ]
 };
