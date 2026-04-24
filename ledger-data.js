@@ -1610,6 +1610,16 @@ window.__LEDGER_DATA__ = {
       category: "吃饭",
       account: "现金",
       note: "买糖葫芦"
+    },
+    {
+      id: "20260424-4",
+      type: "expense",
+      amount: 100.00,
+      date: "2026-04-24",
+      time: "14:32",
+      category: "加油",
+      account: "现金",
+      note: "加油"
     }
   ]
 };
