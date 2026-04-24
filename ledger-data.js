@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-04-24 14:32 EDT",
+  updatedAt: "2026-04-24 14:57 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -1620,6 +1620,16 @@ window.__LEDGER_DATA__ = {
       category: "加油",
       account: "现金",
       note: "加油"
+    },
+    {
+      id: "20260424-5",
+      type: "income",
+      amount: 800.00,
+      date: "2026-04-24",
+      time: "14:57",
+      category: "生意收入",
+      account: "现金",
+      note: "卖 3060Ti 外星人游戏主机"
     }
   ]
 };
