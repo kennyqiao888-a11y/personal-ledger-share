@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-04-24 14:58 EDT",
+  updatedAt: "2026-04-26 20:50 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -1640,6 +1640,16 @@ window.__LEDGER_DATA__ = {
       category: "提成",
       account: "现金",
       note: "提成支出"
+    },
+    {
+      id: "20260426-1",
+      type: "income",
+      amount: 600.00,
+      date: "2026-04-26",
+      time: "20:50",
+      category: "生意收入",
+      account: "现金",
+      note: "卖 9850X3D"
     }
   ]
 };
