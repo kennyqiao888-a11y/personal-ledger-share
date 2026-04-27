@@ -1650,6 +1650,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "现金",
       note: "卖 9850X3D"
+    },
+    {
+      id: "20260426-2",
+      type: "expense",
+      amount: 570.00,
+      date: "2026-04-26",
+      time: "20:50",
+      category: "吃饭",
+      account: "现金",
+      note: "吃饭大龙虾"
     }
   ]
 };
