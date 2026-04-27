@@ -1670,6 +1670,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "现金",
       note: "卖 3060Ti 主机"
+    },
+    {
+      id: "20260426-4",
+      type: "expense",
+      amount: 60.00,
+      date: "2026-04-26",
+      time: "20:51",
+      category: "日用品",
+      account: "银行卡",
+      note: "买猫粮"
     }
   ]
 };
