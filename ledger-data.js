@@ -1710,6 +1710,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "现金",
       note: "卖 5800X + 4060Ti"
+    },
+    {
+      id: "20260428-2",
+      type: "expense",
+      amount: 1550.00,
+      date: "2026-04-28",
+      time: "10:46",
+      category: "采购",
+      account: "现金",
+      note: "买 明日香创世神 13600K + 4070Ti"
     }
   ]
 };
