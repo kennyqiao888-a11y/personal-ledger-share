@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-04-28 10:46 EDT",
+  updatedAt: "2026-04-28 10:47 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -1720,6 +1720,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "现金",
       note: "买 明日香创世神 13600K + 4070Ti"
+    },
+    {
+      id: "20260428-3",
+      type: "income",
+      amount: 1590.00,
+      date: "2026-04-28",
+      time: "10:47",
+      category: "生意收入",
+      account: "未记",
+      note: "卖 9800X3D，3 个，每个 530"
     }
   ]
 };
