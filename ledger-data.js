@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-04-29 19:22 EDT",
+  updatedAt: "2026-05-01 13:31 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -1760,6 +1760,16 @@ window.__LEDGER_DATA__ = {
       category: "日用品",
       account: "现金",
       note: "买菜"
+    },
+    {
+      id: "20260501-1",
+      type: "income",
+      amount: 1100.00,
+      date: "2026-05-01",
+      time: "13:31",
+      category: "生意收入",
+      account: "现金",
+      note: "卖 ROG 3070 主机 + 鼠标键盘"
     }
   ]
 };
