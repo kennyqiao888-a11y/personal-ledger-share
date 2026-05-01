@@ -1770,6 +1770,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "现金",
       note: "卖 ROG 3070 主机 + 鼠标键盘"
+    },
+    {
+      id: "20260501-2",
+      type: "expense",
+      amount: 180.00,
+      date: "2026-05-01",
+      time: "13:31",
+      category: "提成",
+      account: "现金",
+      note: "提成"
     }
   ]
 };
