@@ -1810,6 +1810,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "现金",
       note: "卖 5080 Skytech"
+    },
+    {
+      id: "20260505-2",
+      type: "expense",
+      amount: 200.00,
+      date: "2026-05-05",
+      time: "12:02",
+      category: "提成",
+      account: "现金",
+      note: "提成"
     }
   ]
 };
