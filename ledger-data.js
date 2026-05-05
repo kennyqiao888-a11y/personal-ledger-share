@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-05-05 12:17 EDT",
+  updatedAt: "2026-05-05 12:19 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -1920,6 +1920,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "现金",
       note: "采购机箱"
+    },
+    {
+      id: "20260505-13",
+      type: "income",
+      amount: 310.00,
+      date: "2026-05-05",
+      time: "12:19",
+      category: "其他收入",
+      account: "银行卡",
+      note: "退税收入"
     }
   ]
 };
