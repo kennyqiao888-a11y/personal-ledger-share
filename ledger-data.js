@@ -1890,6 +1890,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "银行卡",
       note: "卖 MSI 5070 主机 + 4K 屏幕（银行卡部分）"
+    },
+    {
+      id: "20260505-10",
+      type: "expense",
+      amount: 200.00,
+      date: "2026-05-05",
+      time: "12:16",
+      category: "提成",
+      account: "现金",
+      note: "提成"
     }
   ]
 };
