@@ -1910,6 +1910,16 @@ window.__LEDGER_DATA__ = {
       category: "房屋维护",
       account: "现金",
       note: "通化粪池花费"
+    },
+    {
+      id: "20260505-12",
+      type: "expense",
+      amount: 110.00,
+      date: "2026-05-05",
+      time: "12:17",
+      category: "采购",
+      account: "现金",
+      note: "采购机箱"
     }
   ]
 };
