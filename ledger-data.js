@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-05-05 12:15 EDT",
+  updatedAt: "2026-05-05 12:16 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -1870,6 +1870,26 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "现金",
       note: "卖 9850X3D"
+    },
+    {
+      id: "20260505-8",
+      type: "income",
+      amount: 600.00,
+      date: "2026-05-05",
+      time: "12:16",
+      category: "生意收入",
+      account: "现金",
+      note: "卖 MSI 5070 主机 + 4K 屏幕（现金部分）"
+    },
+    {
+      id: "20260505-9",
+      type: "income",
+      amount: 2000.00,
+      date: "2026-05-05",
+      time: "12:16",
+      category: "生意收入",
+      account: "银行卡",
+      note: "卖 MSI 5070 主机 + 4K 屏幕（银行卡部分）"
     }
   ]
 };
