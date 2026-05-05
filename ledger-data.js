@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-05-05 12:16 EDT",
+  updatedAt: "2026-05-05 12:17 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -1900,6 +1900,16 @@ window.__LEDGER_DATA__ = {
       category: "提成",
       account: "现金",
       note: "提成"
+    },
+    {
+      id: "20260505-11",
+      type: "expense",
+      amount: 415.00,
+      date: "2026-05-05",
+      time: "12:17",
+      category: "房屋维护",
+      account: "现金",
+      note: "通化粪池花费"
     }
   ]
 };
