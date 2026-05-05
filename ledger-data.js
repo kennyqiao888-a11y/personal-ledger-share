@@ -1848,8 +1848,8 @@ window.__LEDGER_DATA__ = {
       date: "2026-05-05",
       time: "12:03",
       category: "采购",
-      account: "其他",
-      note: "采购 ROG 5080 显卡（账户未说）"
+      account: "现金",
+      note: "采购 ROG 5080 显卡"
     },
     {
       id: "20260505-6",
