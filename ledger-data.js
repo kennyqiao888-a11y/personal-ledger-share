@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-05-02 19:37 EDT",
+  updatedAt: "2026-05-05 12:02 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -1800,6 +1800,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "现金",
       note: "采购 3080 主机"
+    },
+    {
+      id: "20260505-1",
+      type: "income",
+      amount: 3800.00,
+      date: "2026-05-05",
+      time: "12:02",
+      category: "生意收入",
+      account: "现金",
+      note: "卖 5080 Skytech"
     }
   ]
 };
