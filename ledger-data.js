@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-05-05 12:02 EDT",
+  updatedAt: "2026-05-05 12:03 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -1820,6 +1820,16 @@ window.__LEDGER_DATA__ = {
       category: "提成",
       account: "现金",
       note: "提成"
+    },
+    {
+      id: "20260505-3",
+      type: "income",
+      amount: 1250.00,
+      date: "2026-05-05",
+      time: "12:03",
+      category: "生意收入",
+      account: "现金",
+      note: "卖 3070Ti 水冷"
     }
   ]
 };
