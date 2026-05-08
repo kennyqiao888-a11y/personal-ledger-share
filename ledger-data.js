@@ -2000,6 +2000,16 @@ window.__LEDGER_DATA__ = {
       category: "加油",
       account: "现金",
       note: "加油"
+    },
+    {
+      id: "20260508-7",
+      type: "expense",
+      amount: 40.00,
+      date: "2026-05-08",
+      time: "16:34",
+      category: "养车",
+      account: "信用卡",
+      note: "BMW 买零件"
     }
   ]
 };
