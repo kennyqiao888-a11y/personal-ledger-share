@@ -1950,6 +1950,16 @@ window.__LEDGER_DATA__ = {
       category: "养车",
       account: "现金",
       note: "换胎"
+    },
+    {
+      id: "20260508-2",
+      type: "expense",
+      amount: 40.00,
+      date: "2026-05-08",
+      time: "16:31",
+      category: "吃饭",
+      account: "其他",
+      note: "麦当劳（账户未说）"
     }
   ]
 };
