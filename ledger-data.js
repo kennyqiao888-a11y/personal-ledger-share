@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-05-08 16:31 EDT",
+  updatedAt: "2026-05-08 16:32 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -1960,6 +1960,16 @@ window.__LEDGER_DATA__ = {
       category: "吃饭",
       account: "其他",
       note: "麦当劳（账户未说）"
+    },
+    {
+      id: "20260508-3",
+      type: "income",
+      amount: 3100.00,
+      date: "2026-05-08",
+      time: "16:32",
+      category: "生意收入",
+      account: "现金",
+      note: "卖 9800X3D + 5070Ti"
     }
   ]
 };
