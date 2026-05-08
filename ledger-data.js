@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-05-08 16:34 EDT",
+  updatedAt: "2026-05-08 16:37 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -2010,6 +2010,16 @@ window.__LEDGER_DATA__ = {
       category: "养车",
       account: "信用卡",
       note: "BMW 买零件"
+    },
+    {
+      id: "20260508-8",
+      type: "income",
+      amount: 145.00,
+      date: "2026-05-08",
+      time: "16:37",
+      category: "其他收入",
+      account: "现金",
+      note: "修电脑收入"
     }
   ]
 };
