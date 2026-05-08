@@ -1980,6 +1980,16 @@ window.__LEDGER_DATA__ = {
       category: "提成",
       account: "现金",
       note: "提成"
+    },
+    {
+      id: "20260508-5",
+      type: "expense",
+      amount: 40.00,
+      date: "2026-05-08",
+      time: "16:34",
+      category: "吃饭",
+      account: "现金",
+      note: "买盒饭"
     }
   ]
 };
