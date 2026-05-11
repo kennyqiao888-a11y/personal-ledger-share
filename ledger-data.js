@@ -2030,6 +2030,16 @@ window.__LEDGER_DATA__ = {
       category: "日用品",
       account: "银行卡",
       note: "买菜"
+    },
+    {
+      id: "20260510-2",
+      type: "expense",
+      amount: 450.00,
+      date: "2026-05-10",
+      time: "22:05",
+      category: "日用品",
+      account: "银行卡",
+      note: "买鞋"
     }
   ]
 };
