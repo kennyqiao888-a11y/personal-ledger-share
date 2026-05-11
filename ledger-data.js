@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-05-08 16:37 EDT",
+  updatedAt: "2026-05-10 22:05 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -2020,6 +2020,16 @@ window.__LEDGER_DATA__ = {
       category: "其他收入",
       account: "现金",
       note: "修电脑收入"
+    },
+    {
+      id: "20260510-1",
+      type: "expense",
+      amount: 150.00,
+      date: "2026-05-10",
+      time: "22:05",
+      category: "日用品",
+      account: "银行卡",
+      note: "买菜"
     }
   ]
 };
