@@ -2090,6 +2090,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "现金",
       note: "卖 i7-10700 + 3060"
+    },
+    {
+      id: "20260510-8",
+      type: "expense",
+      amount: 150.00,
+      date: "2026-05-10",
+      time: "22:10",
+      category: "提成",
+      account: "现金",
+      note: "提成"
     }
   ]
 };
