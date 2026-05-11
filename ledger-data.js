@@ -2050,6 +2050,16 @@ window.__LEDGER_DATA__ = {
       category: "日用品",
       account: "其他",
       note: "买小团衣服（账户未说）"
+    },
+    {
+      id: "20260510-4",
+      type: "income",
+      amount: 1400.00,
+      date: "2026-05-10",
+      time: "22:06",
+      category: "生意收入",
+      account: "现金",
+      note: "卖 12700 + 5060"
     }
   ]
 };
