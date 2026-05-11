@@ -2080,6 +2080,16 @@ window.__LEDGER_DATA__ = {
       category: "吃饭",
       account: "现金",
       note: "海底捞吃饭"
+    },
+    {
+      id: "20260510-7",
+      type: "income",
+      amount: 800.00,
+      date: "2026-05-10",
+      time: "22:10",
+      category: "生意收入",
+      account: "现金",
+      note: "卖 i7-10700 + 3060"
     }
   ]
 };
