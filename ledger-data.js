@@ -2070,6 +2070,16 @@ window.__LEDGER_DATA__ = {
       category: "提成",
       account: "现金",
       note: "提成"
+    },
+    {
+      id: "20260510-6",
+      type: "expense",
+      amount: 150.00,
+      date: "2026-05-10",
+      time: "22:07",
+      category: "吃饭",
+      account: "现金",
+      note: "海底捞吃饭"
     }
   ]
 };
