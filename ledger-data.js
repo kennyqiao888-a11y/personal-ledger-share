@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-05-11 14:40 EDT",
+  updatedAt: "2026-05-11 22:16 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -2120,6 +2120,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "银行卡",
       note: "采购配件"
+    },
+    {
+      id: "20260511-3",
+      type: "income",
+      amount: 2600.00,
+      date: "2026-05-11",
+      time: "22:16",
+      category: "生意收入",
+      account: "现金",
+      note: "卖 9800X3D + 5070"
     }
   ]
 };
