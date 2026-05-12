@@ -2130,6 +2130,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "现金",
       note: "卖 9800X3D + 5070"
+    },
+    {
+      id: "20260511-4",
+      type: "expense",
+      amount: 200.00,
+      date: "2026-05-11",
+      time: "22:16",
+      category: "提成",
+      account: "现金",
+      note: "提成"
     }
   ]
 };
