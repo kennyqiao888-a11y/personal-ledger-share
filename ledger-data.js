@@ -2330,6 +2330,16 @@ window.__LEDGER_DATA__ = {
       category: "提成",
       account: "现金",
       note: "提成"
+    },
+    {
+      id: "20260521-18",
+      type: "expense",
+      amount: 240.00,
+      date: "2026-05-21",
+      time: "11:24",
+      category: "房屋维护",
+      account: "银行卡",
+      note: "租垃圾箱"
     }
   ]
 };
