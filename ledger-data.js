@@ -2190,6 +2190,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "银行卡",
       note: "Newegg 采购（第二笔）"
+    },
+    {
+      id: "20260521-4",
+      type: "expense",
+      amount: 78.00,
+      date: "2026-05-21",
+      time: "11:19",
+      category: "水费",
+      account: "银行卡",
+      note: "水费"
     }
   ]
 };
