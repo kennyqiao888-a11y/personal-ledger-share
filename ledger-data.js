@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-05-21 11:19 EDT",
+  updatedAt: "2026-05-21 11:20 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -2210,6 +2210,16 @@ window.__LEDGER_DATA__ = {
       category: "电话费",
       account: "银行卡",
       note: "电话费"
+    },
+    {
+      id: "20260521-6",
+      type: "expense",
+      amount: 1000.00,
+      date: "2026-05-21",
+      time: "11:20",
+      category: "采购",
+      account: "银行卡",
+      note: "拍卖采购"
     }
   ]
 };
