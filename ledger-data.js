@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-05-21 11:20 EDT",
+  updatedAt: "2026-05-21 11:21 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -2240,6 +2240,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "银行卡",
       note: "卖两台 5060Ti 主机 + 显示器（银行卡部分）"
+    },
+    {
+      id: "20260521-9",
+      type: "expense",
+      amount: 1918.00,
+      date: "2026-05-21",
+      time: "11:21",
+      category: "采购",
+      account: "银行卡",
+      note: "采购配件 CC"
     }
   ]
 };
