@@ -2200,6 +2200,16 @@ window.__LEDGER_DATA__ = {
       category: "水费",
       account: "银行卡",
       note: "水费"
+    },
+    {
+      id: "20260521-5",
+      type: "expense",
+      amount: 59.00,
+      date: "2026-05-21",
+      time: "11:19",
+      category: "电话费",
+      account: "银行卡",
+      note: "电话费"
     }
   ]
 };
