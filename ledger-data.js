@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-05-21 11:23 EDT",
+  updatedAt: "2026-05-21 11:31 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -2260,6 +2260,76 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "银行卡",
       note: "CC 采购"
+    },
+    {
+      id: "20260521-11",
+      type: "expense",
+      amount: 321.00,
+      date: "2026-05-21",
+      time: "11:24",
+      category: "采购",
+      account: "现金",
+      note: "CC 采购"
+    },
+    {
+      id: "20260521-12",
+      type: "expense",
+      amount: 1500.00,
+      date: "2026-05-21",
+      time: "11:25",
+      category: "采购",
+      account: "现金",
+      note: "采购外星人主机"
+    },
+    {
+      id: "20260521-13",
+      type: "income",
+      amount: 2260.00,
+      date: "2026-05-21",
+      time: "11:25",
+      category: "生意收入",
+      account: "银行卡",
+      note: "卖外星人主机"
+    },
+    {
+      id: "20260521-14",
+      type: "expense",
+      amount: 100.00,
+      date: "2026-05-21",
+      time: "11:28",
+      category: "加油",
+      account: "现金",
+      note: "加油"
+    },
+    {
+      id: "20260521-15",
+      type: "expense",
+      amount: 350.00,
+      date: "2026-05-21",
+      time: "11:30",
+      category: "采购",
+      account: "现金",
+      note: "采购显示器加机箱"
+    },
+    {
+      id: "20260521-16",
+      type: "income",
+      amount: 800.00,
+      date: "2026-05-21",
+      time: "11:31",
+      category: "生意收入",
+      account: "现金",
+      note: "卖 ROG 3060 笔记本"
+    },
+    {
+      id: "20260521-17",
+      type: "expense",
+      amount: 100.00,
+      date: "2026-05-21",
+      time: "11:31",
+      category: "提成",
+      account: "现金",
+      note: "提成"
     }
   ]
 };
