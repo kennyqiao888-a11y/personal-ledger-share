@@ -2220,6 +2220,26 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "银行卡",
       note: "拍卖采购"
+    },
+    {
+      id: "20260521-7",
+      type: "income",
+      amount: 1300.00,
+      date: "2026-05-21",
+      time: "11:20",
+      category: "生意收入",
+      account: "现金",
+      note: "卖两台 5060Ti 主机 + 显示器（现金部分）"
+    },
+    {
+      id: "20260521-8",
+      type: "income",
+      amount: 3080.00,
+      date: "2026-05-21",
+      time: "11:20",
+      category: "生意收入",
+      account: "银行卡",
+      note: "卖两台 5060Ti 主机 + 显示器（银行卡部分）"
     }
   ]
 };
