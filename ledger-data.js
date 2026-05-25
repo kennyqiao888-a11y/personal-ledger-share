@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-05-25 17:27 EDT",
+  updatedAt: "2026-05-25 17:28 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -2460,6 +2460,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "现金",
       note: "采购机箱显示器"
+    },
+    {
+      id: "20260525-13",
+      type: "expense",
+      amount: 1200.00,
+      date: "2026-05-25",
+      time: "17:28",
+      category: "采购",
+      account: "现金",
+      note: "采购 7600X3D 主机"
     }
   ]
 };
