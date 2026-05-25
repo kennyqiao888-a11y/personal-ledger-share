@@ -2480,6 +2480,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "现金",
       note: "卖 i7-12700K + 3080Ti"
+    },
+    {
+      id: "20260525-15",
+      type: "expense",
+      amount: 250.00,
+      date: "2026-05-25",
+      time: "17:30",
+      category: "提成",
+      account: "现金",
+      note: "提成"
     }
   ]
 };
