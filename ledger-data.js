@@ -2420,6 +2420,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "银行卡",
       note: "卖卓伟显示器"
+    },
+    {
+      id: "20260525-9",
+      type: "income",
+      amount: 1300.00,
+      date: "2026-05-25",
+      time: "17:23",
+      category: "生意收入",
+      account: "现金",
+      note: "卖 i5-12600 + 3080"
     }
   ]
 };
