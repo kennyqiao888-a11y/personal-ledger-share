@@ -2360,6 +2360,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "现金",
       note: "回收 i7-13700 + 5070 太阳神主机"
+    },
+    {
+      id: "20260525-3",
+      type: "income",
+      amount: 2100.00,
+      date: "2026-05-25",
+      time: "17:16",
+      category: "生意收入",
+      account: "现金",
+      note: "卖 i7-13700 + 5070 太阳神主机"
     }
   ]
 };
