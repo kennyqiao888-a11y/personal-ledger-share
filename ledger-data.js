@@ -2400,6 +2400,16 @@ window.__LEDGER_DATA__ = {
       category: "燃气费",
       account: "银行卡",
       note: "gas 费"
+    },
+    {
+      id: "20260525-7",
+      type: "income",
+      amount: 1500.00,
+      date: "2026-05-25",
+      time: "17:22",
+      category: "生意收入",
+      account: "银行卡",
+      note: "卖 3080 + i7"
     }
   ]
 };
