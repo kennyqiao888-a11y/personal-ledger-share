@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-05-25 17:28 EDT",
+  updatedAt: "2026-05-25 17:30 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -2470,6 +2470,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "现金",
       note: "采购 7600X3D 主机"
+    },
+    {
+      id: "20260525-14",
+      type: "income",
+      amount: 1500.00,
+      date: "2026-05-25",
+      time: "17:30",
+      category: "生意收入",
+      account: "现金",
+      note: "卖 i7-12700K + 3080Ti"
     }
   ]
 };
