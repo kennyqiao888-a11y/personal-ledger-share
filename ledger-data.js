@@ -2430,6 +2430,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "现金",
       note: "卖 i5-12600 + 3080"
+    },
+    {
+      id: "20260525-10",
+      type: "expense",
+      amount: 200.00,
+      date: "2026-05-25",
+      time: "17:23",
+      category: "提成",
+      account: "现金",
+      note: "提成"
     }
   ]
 };
