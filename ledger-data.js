@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-05-25 17:14 EDT",
+  updatedAt: "2026-05-25 17:16 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -2350,6 +2350,16 @@ window.__LEDGER_DATA__ = {
       category: "加油",
       account: "现金",
       note: "加油"
+    },
+    {
+      id: "20260525-2",
+      type: "expense",
+      amount: 1500.00,
+      date: "2026-05-25",
+      time: "17:16",
+      category: "采购",
+      account: "现金",
+      note: "回收 i7-13700 + 5070 太阳神主机"
     }
   ]
 };
