@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-05-25 17:30 EDT",
+  updatedAt: "2026-05-26 14:31 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -2490,6 +2490,16 @@ window.__LEDGER_DATA__ = {
       category: "提成",
       account: "现金",
       note: "提成"
+    },
+    {
+      id: "20260526-1",
+      type: "income",
+      amount: 360.00,
+      date: "2026-05-26",
+      time: "14:31",
+      category: "生意收入",
+      account: "银行卡",
+      note: "卖主机差价"
     }
   ]
 };
