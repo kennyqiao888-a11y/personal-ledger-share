@@ -2500,6 +2500,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "银行卡",
       note: "卖主机差价"
+    },
+    {
+      id: "20260526-2",
+      type: "expense",
+      amount: 100.00,
+      date: "2026-05-26",
+      time: "14:31",
+      category: "加油",
+      account: "现金",
+      note: "加油"
     }
   ]
 };
