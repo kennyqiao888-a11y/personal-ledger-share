@@ -2520,6 +2520,16 @@ window.__LEDGER_DATA__ = {
       category: "提成",
       account: "银行卡",
       note: "给 weidi 提成"
+    },
+    {
+      id: "20260527-2",
+      type: "expense",
+      amount: 900.00,
+      date: "2026-05-27",
+      time: "11:38",
+      category: "采购",
+      account: "其他",
+      note: "回收 4070 笔记本（账户未说）"
     }
   ]
 };
