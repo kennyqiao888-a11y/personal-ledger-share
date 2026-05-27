@@ -2528,8 +2528,8 @@ window.__LEDGER_DATA__ = {
       date: "2026-05-27",
       time: "11:38",
       category: "采购",
-      account: "其他",
-      note: "回收 4070 笔记本（账户未说）"
+      account: "银行卡",
+      note: "回收 4070 笔记本"
     }
   ]
 };
