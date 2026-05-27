@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-05-26 14:31 EDT",
+  updatedAt: "2026-05-27 11:38 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -2510,6 +2510,16 @@ window.__LEDGER_DATA__ = {
       category: "加油",
       account: "现金",
       note: "加油"
+    },
+    {
+      id: "20260527-1",
+      type: "expense",
+      amount: 500.00,
+      date: "2026-05-27",
+      time: "11:38",
+      category: "提成",
+      account: "银行卡",
+      note: "给 weidi 提成"
     }
   ]
 };
