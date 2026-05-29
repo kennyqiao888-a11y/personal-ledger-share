@@ -2540,6 +2540,16 @@ window.__LEDGER_DATA__ = {
       category: "吃饭",
       account: "现金",
       note: "买面包"
+    },
+    {
+      id: "20260528-2",
+      type: "expense",
+      amount: 200.00,
+      date: "2026-05-28",
+      time: "21:14",
+      category: "日用品",
+      account: "银行卡",
+      note: "沃尔玛购物"
     }
   ]
 };
