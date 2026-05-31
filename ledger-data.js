@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-05-31 00:06 EDT",
+  updatedAt: "2026-05-31 00:09 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -2580,6 +2580,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "现金",
       note: "采购白色创世神机箱"
+    },
+    {
+      id: "20260531-3",
+      type: "income",
+      amount: 888.00,
+      date: "2026-05-31",
+      time: "00:09",
+      category: "房租收入",
+      account: "现金",
+      note: "房租收入"
     }
   ]
 };
