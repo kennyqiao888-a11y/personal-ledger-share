@@ -2570,6 +2570,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "现金",
       note: "采购 Lian Li 一套"
+    },
+    {
+      id: "20260531-2",
+      type: "expense",
+      amount: 550.00,
+      date: "2026-05-31",
+      time: "00:06",
+      category: "采购",
+      account: "现金",
+      note: "采购白色创世神机箱"
     }
   ]
 };
