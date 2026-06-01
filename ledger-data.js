@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-05-31 00:09 EDT",
+  updatedAt: "2026-06-01 14:35 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -2590,6 +2590,26 @@ window.__LEDGER_DATA__ = {
       category: "房租收入",
       account: "现金",
       note: "房租收入"
+    },
+    {
+      id: "20260601-1",
+      type: "expense",
+      amount: 100.00,
+      date: "2026-06-01",
+      time: "14:31",
+      category: "加油",
+      account: "现金",
+      note: "加油"
+    },
+    {
+      id: "20260601-2",
+      type: "expense",
+      amount: 30.00,
+      date: "2026-06-01",
+      time: "14:35",
+      category: "采购",
+      account: "现金",
+      note: "买 Lian Li 接收器"
     }
   ]
 };
