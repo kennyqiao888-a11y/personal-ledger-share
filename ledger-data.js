@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-06-03 11:24 EDT",
+  updatedAt: "2026-06-03 15:45 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -2630,6 +2630,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "现金",
       note: "采购 Legion 4080 主机加显示器"
+    },
+    {
+      id: "20260603-2",
+      type: "expense",
+      amount: 240.00,
+      date: "2026-06-03",
+      time: "15:45",
+      category: "房屋维护",
+      account: "银行卡",
+      note: "租垃圾桶"
     }
   ]
 };
