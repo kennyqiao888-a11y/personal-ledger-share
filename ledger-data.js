@@ -2640,6 +2640,16 @@ window.__LEDGER_DATA__ = {
       category: "房屋维护",
       account: "银行卡",
       note: "租垃圾桶"
+    },
+    {
+      id: "20260603-3",
+      type: "expense",
+      amount: 70.00,
+      date: "2026-06-03",
+      time: "15:45",
+      category: "养车",
+      account: "现金",
+      note: "修车轮胎"
     }
   ]
 };
