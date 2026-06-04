@@ -2699,7 +2699,7 @@ window.__LEDGER_DATA__ = {
       time: "00:04",
       category: "生意收入",
       account: "现金",
-      note: "卖 9800X3D 5070 主机"
+      note: "卖 瓦尔基里 9800X3D 5070 主机"
     }
   ]
 };
