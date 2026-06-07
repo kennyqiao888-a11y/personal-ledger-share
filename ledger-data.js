@@ -2750,6 +2750,16 @@ window.__LEDGER_DATA__ = {
       category: "日用品",
       account: "现金",
       note: "买菜"
+    },
+    {
+      id: "20260607-3",
+      type: "expense",
+      amount: 120.00,
+      date: "2026-06-07",
+      time: "00:10",
+      category: "日用品",
+      account: "现金",
+      note: "买菜"
     }
   ]
 };
