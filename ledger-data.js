@@ -2740,6 +2740,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "现金",
       note: "卖 5070Ti 9800X3D ROG 全家桶"
+    },
+    {
+      id: "20260607-2",
+      type: "expense",
+      amount: 380.00,
+      date: "2026-06-07",
+      time: "00:10",
+      category: "日用品",
+      account: "现金",
+      note: "买菜"
     }
   ]
 };
