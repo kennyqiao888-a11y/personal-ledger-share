@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-06-04 15:57 EDT",
+  updatedAt: "2026-06-07 00:10 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -2730,6 +2730,16 @@ window.__LEDGER_DATA__ = {
       category: "吃饭",
       account: "现金",
       note: "买面包"
+    },
+    {
+      id: "20260607-1",
+      type: "income",
+      amount: 4500.00,
+      date: "2026-06-07",
+      time: "00:10",
+      category: "生意收入",
+      account: "现金",
+      note: "卖 5070Ti 9800X3D ROG 全家桶"
     }
   ]
 };
