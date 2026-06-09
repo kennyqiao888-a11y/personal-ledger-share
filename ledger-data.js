@@ -2800,6 +2800,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "银行卡",
       note: "买 7600X3D 5070 主机"
+    },
+    {
+      id: "20260609-3",
+      type: "expense",
+      amount: 2050.00,
+      date: "2026-06-09",
+      time: "00:53",
+      category: "采购",
+      account: "银行卡",
+      note: "买 9800X3D 5070 主机"
     }
   ]
 };
