@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-06-09 00:55 EDT",
+  updatedAt: "2026-06-09 00:58 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -2830,6 +2830,16 @@ window.__LEDGER_DATA__ = {
       category: "养车",
       account: "银行卡",
       note: "车罚金"
+    },
+    {
+      id: "20260609-6",
+      type: "expense",
+      amount: 1200.00,
+      date: "2026-06-09",
+      time: "00:58",
+      category: "采购",
+      account: "现金",
+      note: "买创世神主机"
     }
   ]
 };
