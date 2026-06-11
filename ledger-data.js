@@ -2890,6 +2890,16 @@ window.__LEDGER_DATA__ = {
       category: "生意收入",
       account: "现金",
       note: "卖 5600X 加 3060 主机"
+    },
+    {
+      id: "20260611-3",
+      type: "income",
+      amount: 10.00,
+      date: "2026-06-11",
+      time: "11:35",
+      category: "其他收入",
+      account: "银行卡",
+      note: "卖 coffee"
     }
   ]
 };
