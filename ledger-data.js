@@ -2893,13 +2893,13 @@ window.__LEDGER_DATA__ = {
     },
     {
       id: "20260611-3",
-      type: "income",
+      type: "expense",
       amount: 10.00,
       date: "2026-06-11",
       time: "11:35",
-      category: "其他收入",
+      category: "吃饭",
       account: "银行卡",
-      note: "卖 coffee"
+      note: "买 coffee"
     },
     {
       id: "20260611-4",
