@@ -2922,16 +2922,6 @@ window.__LEDGER_DATA__ = {
       note: "Newegg 采购"
     },
     {
-      id: "20260611-6",
-      type: "income",
-      amount: 850.00,
-      date: "2026-06-11",
-      time: "13:29",
-      category: "生意收入",
-      account: "现金",
-      note: "卖 Legion 3060 笔记本"
-    },
-    {
       id: "20260611-7",
       type: "income",
       amount: 3300.00,
