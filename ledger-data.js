@@ -1,5 +1,5 @@
 window.__LEDGER_DATA__ = {
-  updatedAt: "2026-06-15 16:54 EDT",
+  updatedAt: "2026-06-15 17:05 EDT",
   entries: [
     {
       id: "20260313-1",
@@ -2970,6 +2970,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "银行卡",
       note: "买 ROG 机箱（没显卡/内存/硬盘）"
+    },
+    {
+      id: "20260615-4",
+      type: "expense",
+      amount: 3900.00,
+      date: "2026-06-15",
+      time: "17:05",
+      category: "其他支出",
+      account: "现金",
+      note: "给 Kevin 回款"
     }
   ]
 };
