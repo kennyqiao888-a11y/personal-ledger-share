@@ -2960,6 +2960,16 @@ window.__LEDGER_DATA__ = {
       category: "吃饭",
       account: "现金",
       note: "吃饭"
+    },
+    {
+      id: "20260615-2",
+      type: "expense",
+      amount: 40.00,
+      date: "2026-06-15",
+      time: "16:53",
+      category: "娱乐",
+      account: "现金",
+      note: "游乐园玩"
     }
   ]
 };
