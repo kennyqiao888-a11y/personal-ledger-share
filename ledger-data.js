@@ -2977,7 +2977,7 @@ window.__LEDGER_DATA__ = {
       amount: 3900.00,
       date: "2026-06-15",
       time: "17:05",
-      category: "其他支出",
+      category: "采购",
       account: "现金",
       note: "给 Kevin 回款"
     },
