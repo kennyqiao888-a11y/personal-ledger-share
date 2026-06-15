@@ -2990,6 +2990,16 @@ window.__LEDGER_DATA__ = {
       category: "提成",
       account: "现金",
       note: "提成"
+    },
+    {
+      id: "20260615-6",
+      type: "income",
+      amount: 2100.00,
+      date: "2026-06-15",
+      time: "17:03",
+      category: "生意收入",
+      account: "现金",
+      note: "卖 7600X3D + 5070"
     }
   ]
 };
