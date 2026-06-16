@@ -3010,6 +3010,16 @@ window.__LEDGER_DATA__ = {
       category: "采购",
       account: "银行卡",
       note: "采购 4070 MSI 笔记本"
+    },
+    {
+      id: "20260616-2",
+      type: "income",
+      amount: 4800.00,
+      date: "2026-06-16",
+      time: "10:28",
+      category: "生意收入",
+      account: "现金",
+      note: "卖 创世神 5080"
     }
   ]
 };
