@@ -3030,6 +3030,16 @@ window.__LEDGER_DATA__ = {
       category: "提成",
       account: "现金",
       note: "提成"
+    },
+    {
+      id: "20260616-4",
+      type: "expense",
+      amount: 3700.00,
+      date: "2026-06-16",
+      time: "10:29",
+      category: "其他支出",
+      account: "现金",
+      note: "给 Kevin 回款"
     }
   ]
 };
